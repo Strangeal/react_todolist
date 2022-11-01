@@ -60,7 +60,7 @@ class TodoItem extends Component {
             checked={completed}
             onChange={() => handleChangeProps(id)}
           />
-          <button onClick={() => deleteTodoProps(id)} type="button">Delete</button>
+          <button onClick={() => deleteTodoProps(id)} type="submit">Delete</button>
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
         <input

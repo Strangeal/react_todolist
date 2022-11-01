@@ -27,10 +27,9 @@ const Navbar = () => {
     setNavbarOpen(false);
   };
 
-  const activeClassName = 'active-link';
   return (
     <nav className="navBar">
-      <button onClick={handleToggle} type="button">
+      <button onClick={handleToggle} type="submit">
         {navbarOpen ? (
           <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
         ) : (
@@ -43,8 +42,9 @@ const Navbar = () => {
             <NavLink
               exact
               to={link.path}
-              className={({ isActive }) => (isActive ? activeClassName : undefined)}
+              className={({ isActive }) => `link ${(isActive ? 'active' : '')}`}
               onClick={() => closeMenu()}
+              end
             >
               {link.text}
             </NavLink>
