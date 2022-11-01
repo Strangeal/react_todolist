@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import TodoContainer from './components/TodoContainer';
-import './App.css'
+// import TodoContainer from './classBased/components/TodoContainer';
+import { BrowserRouter } from 'react-router-dom';
+import TodoContainer from './functionBased/components/TodoContainer';
+// import './classBased/App.css';
+import './functionBased/App.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <TodoContainer />
-  </React.StrictMode>
+    <BrowserRouter>
+      <TodoContainer />
+    </BrowserRouter>
+  </React.StrictMode>,
 );
